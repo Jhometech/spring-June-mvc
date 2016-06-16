@@ -1,18 +1,18 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="html"%>
+
 <html>
 <body>
 	<jsp:include page="/index.jsp" />
 
-	<form action="add.htm" method="post">
-		Name: <input type="text" name="name">
-		 Phone: <input
-			type="text" name="phone">
-			
-			 Course: <select name="course">
-			<option>Core Java</option>
-			<option>Java/J2EE</option>
-			<option>Frameworks</option>
-		</select>
-		<input type="submit" value="Add Student">
-	</form>
+  <html:form action="add.htm" method="POST" commandName="std">
+     Name:<html:input path="name"/>
+     Phone:<html:input path="phone"/>
+     Course:<html:select path="course">
+             <html:option value="Core Java">Core Java</html:option>
+             <html:option value="Java/J2EE">Java/J2EE</html:option>
+             <html:option value="Frameworks">Frameworks</html:option>
+             </html:select>
+             <input type="submit" value="Add Student">
+  </html:form>
 </body>
 </html>
