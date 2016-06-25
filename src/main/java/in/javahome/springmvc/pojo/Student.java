@@ -32,6 +32,14 @@ public class Student {
 	@JoinColumn(name = "PASSPORT_NO")
 	private Passport passport;
 
+	public Integer getStdId() {
+		return stdId;
+	}
+
+	public void setStdId(Integer stdId) {
+		this.stdId = stdId;
+	}
+
 	public Passport getPassport() {
 		return passport;
 	}
